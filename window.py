@@ -8,8 +8,6 @@ def btn_clicked():
 
 window = Tk()
 
-def window_prompt(pop_up):
-    
 
 window.geometry("1000x600")
 window.configure(bg = "#ffffff")
@@ -23,13 +21,11 @@ canvas = Canvas(
     relief = "ridge")
 canvas.place(x = 0, y = 0)
 
-background_img = PhotoImage(file = f"background.png")
+background_img = PhotoImage(file = "assets/background.png")
 background = canvas.create_image(
     500.0, 267.5,
     image=background_img)
 
-if __name__ = '__main__':
-    while True:
 
 
 
