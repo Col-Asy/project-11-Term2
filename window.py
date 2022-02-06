@@ -34,5 +34,6 @@ background = canvas.create_image(
 
 
 
+
 window.resizable(False, False)
 window.mainloop()
