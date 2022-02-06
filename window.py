@@ -1,16 +1,17 @@
+"""improting modules"""
 from tkinter import *
 import time
 
 
-def btn_clicked():
-    print("Button Clicked")
 
-
+"""defining basic prompt window structure"""
 window = Tk()
 window.title('Prompt Window')
-window.iconbitmap('assets/prompt_icon.ico')
+window.iconbitmap('image/prompt_icon.ico')
 
-
+"""showing out the structure
+and the frontend part of the promt 
+window"""
 window.geometry("1000x600")
 window.configure(bg = "#ffffff")
 canvas = Canvas(
@@ -23,7 +24,9 @@ canvas = Canvas(
     relief = "ridge")
 canvas.place(x = 0, y = 0)
 
-background_img = PhotoImage(file = "assets/background.png")
+"""the background image prompt in
+accordance with 20-20-20 rule"""
+background_img = PhotoImage(file = "image/background.png")
 background = canvas.create_image(
     500.0, 267.5,
     image=background_img)
