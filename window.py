@@ -12,7 +12,7 @@ window.iconbitmap('image/prompt_icon.ico')
 """showing out the structure
 and the frontend part of the promt 
 window"""
-window.geometry("1000x600")
+window.state('zoomed')
 window.configure(bg = "#ffffff")
 canvas = Canvas(
     window,
@@ -25,7 +25,7 @@ canvas = Canvas(
 canvas.place(x = 0, y = 0)
 
 """the background image prompt in
-accordance with 20-20-20 rule"""
+accordasnce with 20-20-20 rule"""
 background_img = PhotoImage(file = "image/background.png")
 background = canvas.create_image(
     500.0, 267.5,
