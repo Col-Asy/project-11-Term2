@@ -52,6 +52,10 @@ b0.place(
     width = 463,
     height = 101)
 
+copyright = PhotoImage(file = "image/copy.png")
+background = canvas.create_image(
+    780.0, 820,     #(x,y)
+    image=copyright)
 
 window.resizable(False, False)
 window.mainloop()
