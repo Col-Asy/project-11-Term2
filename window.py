@@ -1,5 +1,5 @@
 from tkinter import *
-import time 
+import time
 
 
 def btn_clicked():
@@ -7,6 +7,8 @@ def btn_clicked():
 
 
 window = Tk()
+window.title('Prompt Window')
+window.iconbitmap('assets/prompt_icon.ico')
 
 
 window.geometry("1000x600")
