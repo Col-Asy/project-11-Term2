@@ -1,6 +1,7 @@
 """Import Modules"""
 from tkinter import *
 import csv
+import json
 # from PIL import ImageTk, Image
 from tkinter import messagebox
 
@@ -8,67 +9,68 @@ from tkinter import messagebox
 """Required Functions"""
 
 def submit_active():
-    time_interval_info_active = intro_active_entry.get()
+    time_interval_info_active = int(intro_active_entry.get())
 
-    """updatedlist = []
-    temporarylist = []
+    # updatedlist = []
+    # temporarylist = []
+    with open("./config.json", "r+") as jsonObj:
+        config = json.load(jsonObj)
+        config["active"] = time_interval_info_active
+        print(config)
+        print(json.dumps(config))
+        jsonObj.seek(0)
+        jsonObj.truncate()
+        jsonObj.write(json.dumps(config))
+        # reader = list(csv.reader(f))  # convert iterable to a list to make it easier
+        # print("Changing active timings...", reader)
+        # # S_NO = 1
+        # # temporarylist = reader  # store a copy of the data
 
-    with open("time.txt", newline="") as f:
-        reader = list(csv.reader(f))  # convert iterable to a list to make it easier
-        print("Changing active timings...")
-        S_NO = 1
-        temporarylist = reader  # store a copy of the data
+        # # for row in reader:  # for every row in the file
+        # #     for field in row:
+        # #         if field == S_NO:  # if a field is == to the required username
+        # #             updatedlist.append(row)  # add each row, line by line, into a list called 'udpatedlist'
+        # #             # new_time_active = time_interval_info_active
+        # updatedlist[0][1] = time_interval_info_active  # set the field for password to the new password
 
-        for row in reader:  # for every row in the file
-            for field in row:
-                if field == S_NO:  # if a field is == to the required username
-                    updatedlist.append(row)  # add each row, line by line, into a list called 'udpatedlist'
-                    new_time_active = time_interval_info_active
-                    updatedlist[0][1] = new_time_active  # set the field for password to the new password
-
-        updatepassword(updatedlist, temporarylist)"""
-    intro_active_entry.delete(0, END)
+        # updatepassword(updatedlist, reader)
+    # intro_active_entry.delete(0, END)
 
 
     messagebox.showinfo('Updated', 'Time Interval Updated!')
 
 
 def submit_sleep():
-    time_interval_info_sleep = intro_sleep_entry.get()
+    time_interval_info_sleep = int(intro_sleep_entry.get())
+    with open("./config.json", "r+") as jsonObj:
+        config = json.load(jsonObj)
+        config["sleep"] = time_interval_info_sleep
+        print(config)
+        print(json.dumps(config))
+        jsonObj.seek(0)
+        jsonObj.truncate()
+        jsonObj.write(json.dumps(config))
+    # updatedlist = []
+    # temporarylist = []
 
-    """updatedlist = []
-    temporarylist = []
+    # with open("time.txt", newline="") as f:
+    #     reader = list(csv.reader(f))  # convert iterable to a list to make it easier
+    #     print("Changing sleep timings...")
+    #     S_NO = 1
+    #     temporarylist = reader  # store a copy of the data
 
-    with open("time.txt", newline="") as f:
-        reader = list(csv.reader(f))  # convert iterable to a list to make it easier
-        print("Changing sleep timings...")
-        S_NO = 1
-        temporarylist = reader  # store a copy of the data
+    #     for row in reader:  # for every row in the file
+    #         for field in row:
+    #             if field == S_NO:  # if a field is == to the required username
+    #                 updatedlist.append(row)  # add each row, line by line, into a list called 'udpatedlist'
+    #                 new_time_sleep = time_interval_info_sleep
+    #                 updatedlist[0][2] = new_time_sleep  # set the field for password to the new password
 
-        for row in reader:  # for every row in the file
-            for field in row:
-                if field == S_NO:  # if a field is == to the required username
-                    updatedlist.append(row)  # add each row, line by line, into a list called 'udpatedlist'
-                    new_time_sleep = time_interval_info_sleep
-                    updatedlist[0][2] = new_time_sleep  # set the field for password to the new password
-
-        updatepassword(updatedlist, temporarylist)"""
-    intro_sleep_entry.delete(0, END)
+    #     updatepassword(updatedlist, temporarylist)
+    # intro_sleep_entry.delete(0, END)
 
     messagebox.showinfo('Updated', 'Time Interval Updated!')
 
-
-
-"""def updatepassword(updatedlist, temporarylist):
-    for index, row in enumerate(temporarylist):
-        for field in row:
-            if field == updatedlist[0]:
-                temporarylist[index] = updatedlist  # replace old record with updated records
-
-    with open("time.txt", "w", newline="") as f:
-        Writer = csv.writer(f)
-        Writer.writerows(temporarylist)
-        print("File has been updated")"""
 
 
 def back_home():
@@ -92,7 +94,8 @@ root = Tk()
 root.geometry("600x500")
 root.resizable(False, False)
 root.title("Edit Time Settings")
-root.iconbitmap('image\computer_icon.ico')
+# root.attributes("-zoomed", True)
+# root.iconbitmap('image\computer_icon.ico')
 
 
 # Defining different frames
