@@ -1,7 +1,6 @@
 """Import Modules"""
 from tkinter import *
 import csv
-# from PIL import ImageTk, Image
 from tkinter import messagebox
 
 
@@ -92,7 +91,7 @@ root = Tk()
 root.geometry("600x500")
 root.resizable(False, False)
 root.title("Edit Time Settings")
-root.iconbitmap('image\computer_icon.ico')
+root.iconbitmap('assets\computer_icon.ico')
 
 
 # Defining different frames
