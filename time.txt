@@ -1,2 +1,0 @@
-S_NO,Active_time,Sleep_time
-1,20,20
