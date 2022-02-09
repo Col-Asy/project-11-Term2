@@ -60,7 +60,7 @@ def screen_break(brTime):
     the programme"""
 
     def end_script():
-        print("")
+        print("The code is ended")
         exit()
 
     """attributes of the Button 2"""
