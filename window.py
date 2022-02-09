@@ -77,7 +77,7 @@ def screen_break(brTime):
     background = canvas.create_image(
         780.0, 820,     #(x,y)
         image=copyright)
-
+    
     window.resizable(False, False)
     window.after(brTime*1000,lambda:window.destroy())   #After the scheduled time window.destroy() 
     window.mainloop()
