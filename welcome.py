@@ -1,7 +1,7 @@
 from tkinter import *
 
-
-
+def settings():
+    print("Settings is clicked")
 
 def welcome_screen():
     window = Tk()
@@ -17,9 +17,8 @@ def welcome_screen():
         highlightthickness = 0,
         relief = "ridge")
     canvas.place(x = 0, y = 0)
+    
 
-    def close_window():
-        
 
     background_img = PhotoImage(file = "resources/background.png")
     background = canvas.create_image(
@@ -31,7 +30,7 @@ def welcome_screen():
         image = img0,
         borderwidth = 0,
         highlightthickness = 0,
-        command = btn_clicked,
+        command = settings,
         relief = "flat")
 
     b0.place(
@@ -44,7 +43,7 @@ def welcome_screen():
         image = img1,
         borderwidth = 0,
         highlightthickness = 0,
-        command = close_window,
+        command = settings,
         relief = "flat")
 
     b1.place(
