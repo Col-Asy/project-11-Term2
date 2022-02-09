@@ -60,7 +60,7 @@ root = Tk()
 root.geometry("600x500")
 root.resizable(False, False)
 root.title("Edit Time Settings")
-# root.iconbitmap('image\computer_icon.ico')
+root.iconbitmap('image\computer_icon.ico')
 
 # Defining different frames
 

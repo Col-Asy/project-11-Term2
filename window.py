@@ -1,7 +1,9 @@
 """improting modules"""
 from tkinter import *
 
-
+"""Defining a new variable screen_break that 
+pops up the break screen as per the active and
+sleep time"""
 def screen_break(brTime):
     window = Tk()
     window.title('Prompt Window')
@@ -23,10 +25,10 @@ def screen_break(brTime):
     canvas.place(x = 0, y = 0)  #the canvas is at (0,0)
 
     """defining a new function i.e when the button is 
-    clicked it'll end the sessionand close the window"""
+    clicked it'll initialize the skip break"""
     def end_session():
         window.destroy()    #closes the window
-        print("Session ended")
+        print("Break skipped")
 
     """the background image prompt in
     accordasnce with 20-20-20 rule"""
@@ -35,8 +37,8 @@ def screen_break(brTime):
         750.0, 320,     #(x,y)
         image=background_img)
 
-    """attributes of button"""
-    img0 = PhotoImage(file = "image/img0.png")
+    """attributes of button 2"""
+    img0 = PhotoImage(file = "image/img1.png")
     b0 = Button(
         image = img0,
         borderwidth = 0,
@@ -46,16 +48,18 @@ def screen_break(brTime):
 
     """defining the co-ordinates of the button"""
     b0.place(
-        x = 526, y = 425,
+        x = 875, y = 425,
         width = 463,
         height = 101)
     
+    """"The function to compeletely terminate 
+    the programme"""
     def end_script():
         print("End of the loop")
         exit()
         
         
-
+    """attributes of the Button 2"""
     img1 = PhotoImage(file = "image/img0.png")
     b1 = Button(
         image = img1,
@@ -65,7 +69,7 @@ def screen_break(brTime):
         relief = "flat")
 
     b1.place(
-        x = 400, y = 400,
+        x = 170, y = 425,
         width = 463,
         height = 101)
 
@@ -75,5 +79,5 @@ def screen_break(brTime):
         image=copyright)
 
     window.resizable(False, False)
-    window.after(brTime*1000,lambda:window.destroy())
+    window.after(brTime*1000,lambda:window.destroy())   #After the scheduled time window.destroy() 
     window.mainloop()
