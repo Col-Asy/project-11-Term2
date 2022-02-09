@@ -1,4 +1,5 @@
 """improting modules"""
+import imp
 from tkinter import *
 
 """Defining a new variable screen_break that 
@@ -55,7 +56,7 @@ def screen_break(brTime):
     """"The function to compeletely terminate 
     the programme"""
     def end_script():
-        print("End of the loop")
+        print("")
         exit()
         
         
