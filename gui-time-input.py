@@ -7,7 +7,7 @@ from tkinter import messagebox
 
 
 def submit_active():
-    time_interval_info_active = int(intro_active_entry.get())
+    time_interval_info_active = float(intro_active_entry.get())
 
     with open("./config.json", "r+") as jsonObj:
         config = json.load(jsonObj)
@@ -24,7 +24,7 @@ def submit_active():
 
 
 def submit_sleep():
-    time_interval_info_sleep = int(intro_sleep_entry.get())
+    time_interval_info_sleep = float(intro_sleep_entry.get())
     with open("./config.json", "r+") as jsonObj:
         config = json.load(jsonObj)
         config["sleep"] = time_interval_info_sleep
@@ -60,7 +60,7 @@ root = Tk()
 root.geometry("600x500")
 root.resizable(False, False)
 root.title("Edit Time Settings")
-root.iconbitmap('image\computer_icon.ico')
+# root.iconbitmap('image\computer_icon.ico')
 
 # Defining different frames
 
