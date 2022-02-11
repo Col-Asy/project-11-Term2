@@ -67,6 +67,7 @@ def change_time(config):
     def continue_ahead():
         root.destroy()
         print("The gui-time box is closed")
+        return
 
     # Defining different frames
 
