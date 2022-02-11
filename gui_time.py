@@ -1,6 +1,6 @@
 """Import Modules"""
 # from curses import window
-from cgitb import text
+#from cgitb import text
 from tkinter import *
 import json
 from tkinter import messagebox
