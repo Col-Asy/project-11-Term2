@@ -7,14 +7,14 @@ from tkinter import messagebox
 
 """Required Functions"""
 
-def change_time():
+def change_time(config):
     def submit_active():
         time_interval_info_active = float(intro_active_entry.get())
 
-        with open("./config.json", "r+") as jsonObj:
-            config = json.load(jsonObj)
+        with open("./config.json", "w") as jsonObj:
+            # config = json.load(jsonObj)
             config["active"] = time_interval_info_active
-            print(config)
+            # print(config)
             print(json.dumps(config))
             jsonObj.seek(0)
             jsonObj.truncate()
@@ -28,7 +28,7 @@ def change_time():
     def submit_sleep():
         time_interval_info_sleep = float(intro_sleep_entry.get())
         with open("./config.json", "r+") as jsonObj:
-            config = json.load(jsonObj)
+            # config = json.load(jsonObj)
             config["sleep"] = time_interval_info_sleep
             print(config)
             print(json.dumps(config))
