@@ -37,7 +37,7 @@ def screen_break(brTime):
     """the background image prompt in
     accordasnce with 20-20-20 rule"""
     background_img = PhotoImage(file="image/background.png")
-    background = canvas.create_image(
+    canvas.create_image(
         750.0, 320,  # (x,y)
         image=background_img)
 
@@ -78,7 +78,7 @@ def screen_break(brTime):
         height=101)
 
     copyright = PhotoImage(file="image/copy.png")
-    background = canvas.create_image(
+    canvas.create_image(
         780.0, 820,  # (x,y)
         image=copyright)
 

@@ -1,11 +1,10 @@
 """Import Modules"""
-# from curses import window
-#from cgitb import text
 from tkinter import *
 import json
 from tkinter import messagebox
 
 """Required Functions"""
+
 
 def change_time(config):
     def submit_active():
@@ -24,7 +23,6 @@ def change_time(config):
 
         messagebox.showinfo('Updated', 'Time Interval Updated!')
 
-
     def submit_sleep():
         time_interval_info_sleep = float(intro_sleep_entry.get())
         with open("./config.json", "r+") as jsonObj:
@@ -40,22 +38,13 @@ def change_time(config):
 
         messagebox.showinfo('Updated', 'Time Interval Updated!')
 
-
-    def back_home():
-        home.pack(fill='both', expand=1)
-        active.pack_forget()
-        sleep.pack_forget()
-
-
     def change_active():
         active.pack(fill="both", expand=1)
         sleep.pack_forget()
 
-
     def change_sleep():
         sleep.pack(fill="both", expand=1)
         active.pack_forget()
-
 
     """Adding required settings for window size"""
     root = Tk()
@@ -71,16 +60,18 @@ def change_time(config):
 
     # Defining different frames
 
-    home = Frame(root)
+    Frame(root)
     active = Frame(root)
     sleep = Frame(root)
 
     # Headline
-    heading = Label(root, text="Time Settings", font=("Rockwell", 28), bg="#02c021", width="300", height="3", fg="white")
+    heading = Label(root, text="Time Settings", font=("Rockwell", 28), bg="#02c021", width="300", height="3",
+                    fg="white")
     heading.pack()
 
     """Buttons for changing options to edit, i.e. sleep or active time intervals"""
-    btn1 = Button(root, text="ACTIVE", command=change_active, height="1", font=("Rockwell", 15), bg="#02c021", fg="white")
+    btn1 = Button(root, text="ACTIVE", command=change_active, height="1", font=("Rockwell", 15), bg="#02c021",
+                  fg="white")
     btn1.place(x=22, y=150)
 
     btn2 = Button(root, text="SLEEP", command=change_sleep, height="1", font=("Rockwell", 15), bg="#02c021", fg="white")
@@ -103,7 +94,7 @@ def change_time(config):
     # Active Frame
 
     intro_active = Label(active, text="Interval for which you want the P.C. to stay awake(min.):", fg='#02c021',
-                        font=("Bookman Old Style", 12, "bold"))
+                         font=("Bookman Old Style", 12, "bold"))
     intro_active.place(x=50, y=130)
     intro_active_entry = Entry(active, bd=3, fg="#02c021", font=("Bookman Old Style", 13))
     intro_active_entry.place(x=70, y=180)
@@ -112,17 +103,17 @@ def change_time(config):
     sub_btn = Button(active, text='SUBMIT', command=submit_active, border=3, font=("Rockwell", 10, "bold"))
     sub_btn.place(x=70, y=230)
 
-    #Continue button to destroy window 
+    # Continue button to destroy window
     # Submit Button
-    img0 = PhotoImage(file="image/img1.png")
-    b0 = Button(root, 
-        text="CONTINUE", 
-        command=continue_ahead, 
-        height="1", 
-        font=("Rockwell", 15), 
-        bg="#02c021", 
-        fg="white")
+    PhotoImage(file="image/img1.png")
+    b0 = Button(root,
+                text="CONTINUE",
+                command=continue_ahead,
+                height="1",
+                font=("Rockwell", 15),
+                bg="#02c021",
+                fg="white")
 
-    b0.place(x=230, y=150,)
-        
+    b0.place(x=230, y=150, )
+
     mainloop()
