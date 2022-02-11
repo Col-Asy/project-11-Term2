@@ -5,6 +5,8 @@ from gui_time import change_time
 
 def welcome_screen(config):
     window = Tk()
+    window.title('Welcome Window')
+    window.iconbitmap('image/prompt_icon.ico')
     print(config["active"])
     window.state('zoomed')
     window.configure(bg = "#ffffff")
