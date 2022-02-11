@@ -3,7 +3,7 @@ from math import floor
 import json
 import time
 from window import screen_break
-from plyer import notification
+
 config_file = open('./config.json')
 config = json.load(config_file)
 

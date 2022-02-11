@@ -1,4 +1,6 @@
 """Import Modules"""
+# from curses import window
+from cgitb import text
 from tkinter import *
 import json
 from tkinter import messagebox
@@ -62,6 +64,10 @@ def change_time():
     root.title("Edit Time Settings")
     root.iconbitmap('image\computer_icon.ico')
 
+    def continue_ahead():
+        root.destroy()
+        print("The gui-time box is closed")
+
     # Defining different frames
 
     home = Frame(root)
@@ -105,4 +111,17 @@ def change_time():
     sub_btn = Button(active, text='SUBMIT', command=submit_active, border=3, font=("Rockwell", 10, "bold"))
     sub_btn.place(x=70, y=230)
 
+    #Continue button to destroy window 
+    # Submit Button
+    img0 = PhotoImage(file="image/img1.png")
+    b0 = Button(root, 
+        text="CONTINUE", 
+        command=continue_ahead, 
+        height="1", 
+        font=("Rockwell", 15), 
+        bg="#3477eb", 
+        fg="white")
+
+    b0.place(x=230, y=150,)
+        
     mainloop()
