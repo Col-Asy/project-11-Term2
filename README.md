@@ -9,7 +9,7 @@ ___
 Intalling the dependencies ```$pip install tkinter```
 ___
 Inline-style: 
-![alt text](image/screenshots/Screenshot 2022-02-11 221414.png "Welcome page")
+![alt text](https://github.com/Col-Asy/project-11-Term2/blob/48f3d0924f931e26e86b60cca973d2ac5f960c72/image/screenshots/Screenshot%202022-02-11%20221414.png "Welcome page")
 
 ## Contributors
 `Ayush Barnwal`
