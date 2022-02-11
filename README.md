@@ -7,6 +7,10 @@ steep and instead made a project to input the active and sleep time which will y
 First step```$git clone https://github.com/Col-Asy/project-11-Term2.git```
 ___
 Intalling the dependencies ```$pip install tkinter```
+___
+Inline-style: 
+![alt text](image/screenshots/Screenshot 2022-02-11 221414.png "Welcome page")
+
 ## Contributors
 `Ayush Barnwal`
 `Mohak Malhotra`
