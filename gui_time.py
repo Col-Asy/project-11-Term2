@@ -76,24 +76,24 @@ def change_time(config):
     sleep = Frame(root)
 
     # Headline
-    heading = Label(root, text="Time Settings", font=("Rockwell", 28), bg="#3477eb", width="300", height="3", fg="white")
+    heading = Label(root, text="Time Settings", font=("Rockwell", 28), bg="#02c021", width="300", height="3", fg="white")
     heading.pack()
 
     """Buttons for changing options to edit, i.e. sleep or active time intervals"""
-    btn1 = Button(root, text="ACTIVE", command=change_active, height="1", font=("Rockwell", 15), bg="#3477eb", fg="white")
+    btn1 = Button(root, text="ACTIVE", command=change_active, height="1", font=("Rockwell", 15), bg="#02c021", fg="white")
     btn1.place(x=22, y=150)
 
-    btn2 = Button(root, text="SLEEP", command=change_sleep, height="1", font=("Rockwell", 15), bg="#3477eb", fg="white")
+    btn2 = Button(root, text="SLEEP", command=change_sleep, height="1", font=("Rockwell", 15), bg="#02c021", fg="white")
     btn2.place(x=500, y=150)
 
     """Adding Input Boxes"""
 
     # Sleep Frame
 
-    intro_sleep = Label(sleep, text="Interval for which you want the P.C. to sleep(sec):", fg='#3477eb',
+    intro_sleep = Label(sleep, text="Interval for which you want the P.C. to sleep(sec):", fg='#02c021',
                         font=("Bookman Old Style", 12, "bold"))
     intro_sleep.place(x=50, y=130)
-    intro_sleep_entry = Entry(sleep, bd=3, fg="#3477eb", font=("Bookman Old Style", 13))
+    intro_sleep_entry = Entry(sleep, bd=3, fg="#02c021", font=("Bookman Old Style", 13))
     intro_sleep_entry.place(x=70, y=180)
 
     # Submit Button
@@ -102,10 +102,10 @@ def change_time(config):
 
     # Active Frame
 
-    intro_active = Label(active, text="Interval for which you want the P.C. to stay awake(min.):", fg='#3477eb',
+    intro_active = Label(active, text="Interval for which you want the P.C. to stay awake(min.):", fg='#02c021',
                         font=("Bookman Old Style", 12, "bold"))
     intro_active.place(x=50, y=130)
-    intro_active_entry = Entry(active, bd=3, fg="#3477eb", font=("Bookman Old Style", 13))
+    intro_active_entry = Entry(active, bd=3, fg="#02c021", font=("Bookman Old Style", 13))
     intro_active_entry.place(x=70, y=180)
 
     # Submit Button
@@ -120,7 +120,7 @@ def change_time(config):
         command=continue_ahead, 
         height="1", 
         font=("Rockwell", 15), 
-        bg="#3477eb", 
+        bg="#02c021", 
         fg="white")
 
     b0.place(x=230, y=150,)
